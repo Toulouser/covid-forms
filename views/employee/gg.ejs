@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <h1>Vaccine Registration</h1>
+    
+    <form action="/employees/<%= emp._id %>/vaccine" method="POST">
+      <input type="text" name="name" placeholder="Enter Name">
+      <input type="date" name="date" placeholder="Enter the date">
+      <select id="vaccine" name="vaccine">
+        <option value="Covishield">Covishield</option>
+        <option value="Covavaxin">Covavaxin</option>
+        <option value="Sputnik">Sputnik V</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+
+
+
+
+  </body>
+</html>

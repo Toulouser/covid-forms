@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1>Show Page</h1> -->
+    <h1><%=emp.EmpName%></h1>
+    <h2><%=emp.Address%></h2>
+    <h2><%=emp.DOB%></h2>
+  </body>
+  <a href="/employees/<%=emp._id%>/edit">Edit</a>
+  <br>
+  <a href="/employees">All Employees</a>
+  
+  <br>
+
+  <a href="/employees/<%=emp._id%>/dependants">Dependants</a>
+  <br>
+  <a href="/employees/<%=emp._id %>/dependants/new">Add Dependant</a>
+
+  <p>
+    <form action="/employees/<%=emp._id%>?_method=DELETE" method="POST">
+      <button>DELETE</button>
+    </form>
+  </p>
+
+  <h4><a href = "/employees/<%= emp._id %>/status">Vaccine Status</a></h4>
+
+  <form action="/employees/<%=emp._id%>/check" method= "POST">
+    <h4>Were you tested positive</h4>
+    <input type="radio" id="yes" name="status" value="Yes">
+    <label for="yes">Yes</label>
+    <input type="radio" id="no"  name="status" value="No">
+    <label for="no">No</label>
+    <input type="submit" value="Check eligibilty">
+  </form>
+</html>

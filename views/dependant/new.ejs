@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Add A New Dependant</h1>
+    <form action="/employees/<%=id%>/dependants" method="POST">
+      <div>
+        <label for="title">Name</label>
+        <input type="text" name="dep[Name]" id="title" />
+      </div>
+
+      <div>
+        <label for="relation">Relation</label>
+        <input type="text" name="dep[Relation]" ,id="relation" />
+      </div>
+
+      <button>Submit</button>
+      <br />
+      <h2>
+        <a href="/employees/<%=id%>">Back</a>
+      </h2>
+    </form>
+  </body>
+</html>
